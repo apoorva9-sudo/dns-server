@@ -114,7 +114,7 @@ The implementation supports commonly used DNS record types including:
 The DNS server follows a modular architecture where incoming DNS packets are received through UDP, parsed into structured DNS objects, checked against Redis, and forwarded to an upstream resolver when required.
 
 <p align="center">
-  <img src="docs/architecture.png" alt="DNS Server Architecture" width="90%">
+  <img src="docs/DNS Server Architecture Infographic.png" alt="DNS Server Architecture" width="90%">
 </p>
 
 ### High-Level Flow
