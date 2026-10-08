@@ -1,0 +1,30 @@
+services:
+
+  dns-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: dns-server
+
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+
+    ports:
+      - "2053:2053/udp"
+
+    depends_on:
+      - redis
+
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+
+    container_name: dns-redis
+
+    ports:
+      - "6379:6379"
+
+    restart: unless-stopped

@@ -1,0 +1,17 @@
+
+{
+  "name": "dns-server",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "bun run app/main.ts",
+    "start": "node ./dist/main.js --resolver 1.1.1.1:53",
+    "build": "bun build app/main.ts --outdir=dist --target=node"
+  },
+  "type": "module",
+  "dependencies": {
+    "ioredis": "^5.6.1",
+    "redis": "^5.5.6"
+  }
+}
